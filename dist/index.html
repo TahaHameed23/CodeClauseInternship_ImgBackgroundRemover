@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Background Removal</title>
+  <!-- <link href="style.css" rel="stylesheet"> -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+</head>
+<body class="bg-black overflow-y-hidden">
+<div class="bg-blue-600 text-white w-[100vw] text-5xl text-center p-12 shadow-blue-500 shadow-lg lg:p-6 lg:text-3xl">Background Remover</div>
+  <div class="h-[100vh] w-[100vw] flex justify-center absolute top-[38vh]">
+    <div id='container' class="bg-slate-400 w-[70vw] h-fit pb-32 p-8 rounded-lg items-center text-center align-middle flex flex-col lg:w-fit lg:absolute lg:top-[-10vh]">
+      <div id="prview">
+        <img src="" alt="" id="preview">
+      </div>
+      <div id="choose">
+        <label for="imageInput"></label>
+        <input  type="file"  id="imageInput" onchange="readURL(this)" accept="image/*" class=" bg-slate-600 px-6 py-16 mt-4 text-3xl border-l-8 border-blue-500 file:rounded-lg file:border-none file:p-4 file:mr-8 lg:text-lg lg:p-6 lg:mb-[-15vh] lg:file:p-2 lg:pr-1">
+        
+      </div>
+      
+      <div id="removebg" class="w-fit mt-[-2rem] lg:mt-[-4vh]">
+        <button  disabled title="Please select a file first" id='removeBgBtn' class="transition duration-150  cursor-not-allowed bg-blue-600 text-white p-8 text-3xl rounded-lg hover:bg-blue-700 ease-in  relative top-24 lg:text-lg lg:p-4 lg:mt-[-18vh]" onclick="handleBg()">Remove Background</button>
+      </div>
+        
+        <div id='loading' class="bg-red text-white z-10 flex align-bottom relative bottom-[-6vh] ">
+          
+        </div>
+      </div>
+</div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
