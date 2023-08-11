@@ -1,3 +1,4 @@
+import API_KEY  from "./apikey";
 function readURL(input) {
   if (input.files && input.files[0]) {
     const reader = new FileReader();
@@ -29,7 +30,8 @@ function handleBg(){
   const formData = new FormData();
   formData.append('image_file',image);
   formData.append('size','auto');
-  const apiKey= 'W2n8iaTw9nPN4FHqYbbs7twx'
+  const apiKey = API_KEY
+  console.log(API_KEY);
   fetch('https://api.remove.bg/v1.0/removebg',{
     method:'POST',
     headers:{
